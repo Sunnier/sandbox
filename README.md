@@ -1,1 +1,1 @@
-[gallery](gallery1/)
+[gallery](gallery\ 1/index.html)
