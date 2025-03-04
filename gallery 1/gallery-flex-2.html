@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>test</title>
+	<link rel="stylesheet" href="style.css">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/svg+xml" href="favicon.svg">
+	<script>
+	document.addEventListener("DOMContentLoaded", () => {
+			const [x] = document.getElementsByClassName("gallery-flex-1")
+			
+			const data = [
+				[55, 'Lorem ipsum dolor sit amet'],
+				[25, 'Nunc dapibus aliquet nisl sed accumsan. Nunc eget eros metus maecenas.'],
+				[82, 'Nulla condimentum diam sapien.'],
+				[106, 'Aenean egestas vel metus consectetur tempor. Donec porta ligula augue, et sodales dolor imperdiet nec. Aliquam in est ex. Praesent dui purus, convallis at laoreet ac, interdum eget orci. Donec ut massa ut augue rutrum finibus. Integer id hendrerit nulla. Phasellus nec nibh at elit dignissim maximus. Suspendisse nec tristique turpis, in cursus purus.'],
+				[109, 'Nullam sed erat varius sem tincidunt faucibus et vitae tortor. In hac habitasse platea dictumst.'],
+			]
+
+			data.forEach(
+				([id, title]) => {
+					const y = document.createElement("figure")
+
+					y.innerHTML = `
+						<div class="pic">
+							<img alt="${title}" src="https://picsum.photos/id/${id}/600/400">
+						</div>
+						<div class="description">
+							${title}
+						</div>
+					`;
+
+					x.appendChild(y)
+				}
+			)
+		});
+
+	</script>
+</head>
+
+<main>
+	<h2>Gallery Flex 1</h2>
+	<div class="gallery-flex-2">
+		<div class="pic">
+            <img alt="${title}" src="https://picsum.photos/id/55/600/400">
+        </div>
+        <div class="pic">
+            <img alt="${title}" src="https://picsum.photos/id/55/600/400">
+        </div>
+
+        <div class="pic">
+            <img alt="${title}" src="https://picsum.photos/id/55/600/400">
+        </div>
+        <div class="pic"></div>
+	</div>
+</main>
+
+</html>
